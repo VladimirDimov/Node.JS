@@ -8,4 +8,6 @@ module.exports.init = function () {
     });
 
     var User = mongoose.model('User', userSchema);
+
+    module.exports = User;
 }
