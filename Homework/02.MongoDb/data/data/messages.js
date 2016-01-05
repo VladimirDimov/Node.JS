@@ -10,5 +10,19 @@ module.exports = {
 
             cb(null, dat);
         });
+    },
+
+    getByUser: function (firstUserId, secondUserId, cb) {
+        Message
+            .find({
+                $and: [
+                    { $or: [{ from: firstUserId }, { from: secondUserId }] },
+                    { $or: [{ to: firstUserId }, { to: secondUserId }] }
+                ]
+            }, function (err, dat) {
+                if(err) return cb(err);
+                
+                return cb(null, dat);
+            });
     }
 };

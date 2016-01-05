@@ -13,6 +13,7 @@ module.exports = {
             return cb(null, dat);
         });
     },
+
     login: function (user, cb) {
         User.
             findOne({ username: user.username })
@@ -42,6 +43,7 @@ module.exports = {
                 });
             });
     },
+
     getById: function (id, cb) {
         User
             .findById(id, function (err, dat) {
@@ -52,15 +54,23 @@ module.exports = {
                 return cb(dat);
             });
     },
+
     getByUsername: function (username, cb) {
         User
-            .where({ username: username }, function (err, dat) {
+            .findOne({ username: username }, function (err, dat) {
                 if (err) {
                     return cb(err);
                 };
 
-                return cb(dat);
+                return cb(null, dat);
             });
+    },
+
+    getByToken: function (token, cb) {
+        User.findOne({ token: token }, function (err, dat) {
+            if (err) return cb(err);
+            return cb(null, dat);
+        });
     }
 };
 
