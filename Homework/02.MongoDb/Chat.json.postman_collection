@@ -1,0 +1,56 @@
+{
+	"id": "57ae5bc5-64c5-43e5-e61f-6dff3ce1ccf1",
+	"name": "Chat",
+	"description": "",
+	"order": [
+		"43e62912-a46a-acd8-820b-12476849ca65",
+		"d898e2ee-d1da-061a-f4e8-ad5d2f560aa6"
+	],
+	"folders": [],
+	"timestamp": 1451989337758,
+	"owner": 0,
+	"remoteLink": "",
+	"public": false,
+	"requests": [
+		{
+			"id": "43e62912-a46a-acd8-820b-12476849ca65",
+			"headers": "x-authkey: vladko3)0$@&&))4@&()&%%6441722*29)211#871#60%!509290)1&1@#*7\nContent-Type: application/json\n",
+			"url": "http://localhost:3000/register",
+			"preRequestScript": "",
+			"pathVariables": {},
+			"method": "POST",
+			"data": [],
+			"dataMode": "raw",
+			"version": 2,
+			"tests": "",
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1451990427729,
+			"name": "register",
+			"description": "",
+			"collectionId": "57ae5bc5-64c5-43e5-e61f-6dff3ce1ccf1",
+			"responses": [],
+			"rawModeData": "{\n    \"username\": \"misho\",\n    \"password\": \"123\",\n    \"passwordRepeat\": \"123\"\n}"
+		},
+		{
+			"id": "d898e2ee-d1da-061a-f4e8-ad5d2f560aa6",
+			"headers": "x-authkey: vladko3)0$@&&))4@&()&%%6441722*29)211#871#60%!509290)1&1@#*7\nContent-Type: application/json\n",
+			"url": "http://localhost:3000/login",
+			"preRequestScript": "",
+			"pathVariables": {},
+			"method": "POST",
+			"data": [],
+			"dataMode": "raw",
+			"version": 2,
+			"tests": "",
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1451993194951,
+			"name": "login",
+			"description": "",
+			"collectionId": "57ae5bc5-64c5-43e5-e61f-6dff3ce1ccf1",
+			"responses": [],
+			"rawModeData": "{\n    \"username\": \"pesho\",\n    \"password\": \"123\"\n}"
+		}
+	]
+}
