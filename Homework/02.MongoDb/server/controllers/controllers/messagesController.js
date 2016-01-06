@@ -43,11 +43,15 @@ module.exports = {
         getByUser: function (req, res) {
             data.users.getByUsername(req.query.user, function (err, dat) {
                 if (err) {
-                    res.status(err.status || 400).send(err);
+                    res.status(err.status || 400)
+                    .send(err);
+                    return;
                 }
 
                 if (dat == null) {
-                    res.status(302).send('User not found');
+                    res.status(302)
+                    .send('User not found');
+                    return;
                 }
 
                 data.messages.getByUser(req.user.id, dat.id, function (err, dat) {

@@ -12,6 +12,8 @@ module.exports = function () {
     passport.use(new Strategy(
         function (token, cb) {
             data.users.getByToken(token, function (err, user) {
+                var role = passport.role;
+                console.log(role);
                 if (err) { return cb(err); }
                 if (!user) { return cb(null, false); }
                 return cb(null, user);

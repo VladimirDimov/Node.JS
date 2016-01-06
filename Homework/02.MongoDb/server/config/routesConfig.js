@@ -1,7 +1,7 @@
 var express = require('express'),
     controllers = require('../controllers'),
     passport = require('passport');
-    require('passport-http-bearer').Strategy;
+require('passport-http-bearer').Strategy;
 
 module.exports = function (app) {
     app.get('/', function (req, res) {

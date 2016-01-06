@@ -11,7 +11,7 @@ module.exports = {
                         .send(err.message);
                 };
 
-                res.send(dat);
+                res.send(dat);                
             });
         },
         get: function (req, res) {
