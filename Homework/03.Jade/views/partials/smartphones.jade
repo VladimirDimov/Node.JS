@@ -1,0 +1,19 @@
+extends ./home.jade
+
+block main-content    
+    <h1>Smartphones</h1>
+    table.table.table-striped.table-hover
+      thead
+        tr
+          th #
+          th Model
+          th Price
+          th Image
+      tbody
+        each phone, index in phones
+            tr
+            td= index + 1
+            td= phone.model
+            td= phone.price
+            td
+                img(src=phone.imageUrl style="height: 80px")

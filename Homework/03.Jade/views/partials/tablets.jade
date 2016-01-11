@@ -1,0 +1,19 @@
+extends ./home.jade
+
+block main-content    
+    <h1>Tablets</h1>
+    table.table.table-striped.table-hover
+      thead
+        tr
+          th #
+          th Model
+          th Price
+          th Image
+      tbody
+        each t, index in tablets
+            tr
+            td= index + 1
+            td= t.model
+            td= t.price
+            td
+                img(src=t.imageUrl style="height: 80px")

@@ -1,0 +1,17 @@
+{
+  "name": "jade",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bootstrap": "^3.3.6",
+    "express": "^4.13.3",
+    "jade": "^1.11.0",
+    "jade-bootstrap": "^1.0.1"
+  }
+}
