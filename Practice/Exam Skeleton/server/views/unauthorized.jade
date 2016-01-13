@@ -1,0 +1,15 @@
+doctype
+html
+   head
+      title User Unauthorized
+      link(rel="stylesheet" href="/lib/bootstrap-3.2.0/css/bootstrap.min.css")
+      link(rel="stylesheet" href="/css/site.css")
+   body
+      h1 Unauthorised
+      img(src='../../images/unauthorized.jpg')
+      footer
+         p.text-center
+            | &copy; Telerik Academy 2014
+
+      script.
+         setTimeout(function(){window.location = "account/login"}, 1000);
