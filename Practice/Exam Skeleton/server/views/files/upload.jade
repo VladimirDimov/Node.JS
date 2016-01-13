@@ -1,0 +1,13 @@
+extends ../shared/layout
+
+block main-content
+    form(role='form', method='POST', name='loginForm', action='/upload')
+        .form-group
+            input.form-control.input-sm.floatlabel(type='file', name='file', required='', ng-minlength='6', placeholder='File')
+            span.label.error(ng-show='loginForm.username.$error.required')
+                | *This is a required field
+        .form-group
+            input.form-control.input-sm(type='text', name='fileInfo', placeholder='File info')
+            span.label.error(ng-show='loginForm.password.$error.required')
+                | *This is a required field
+        input.btn.btn-success.btn-block(type='submit', value='Login')

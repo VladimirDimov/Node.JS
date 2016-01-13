@@ -1,0 +1,57 @@
+doctype
+html
+    head
+        title Telerik File Upload System
+        script(src="http://localhost:3000/lib/jquery-2.1.1/jquery.min.js")
+        script(src="http://localhost:3000/lib/bootstrap-3.2.0/js/bootstrap.min.js")
+        script(src="/lib/bootpag/lib/jquery.bootpag.min.js")
+        link(rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css")
+        link(rel="stylesheet" href="/lib/bootstrap-3.2.0/css/bootstrap.min.css")
+        link(rel="stylesheet" href="/css/site.css")
+    body(ng-app="app")
+        header
+            nav.navbar.navbar-default
+                .container-fluid
+                    .navbar-header
+                        button.navbar-toggle.collapsed(type='button', data-toggle='collapse', data-target='#bs-example-navbar-collapse-1')
+                            span.sr-only E-commerse navigation
+                        a.navbar-brand(href='/') Company Name
+                    #bs-example-navbar-collapse-1.collapse.navbar-collapse
+                        ul.nav.navbar-nav
+                            li.active
+                                a(href='/')
+                                    | Home
+                                    span.sr-only (current)
+                            li
+                                a(href='/upload') File upload
+                            li
+                                a(href='#') Page 2
+                            li
+                                a(href='#') Page 3
+                        ul.nav.navbar-nav.navbar-right
+                            if (currentUser)
+                                if(currentUser.roles === 'admin')
+                                    li
+                                        a(href="/admin") Administration
+                                li
+                                    a(href="/account/profile") #{currentUser.username}
+                                li
+                                    a(href="/account/logout") Logout
+                            else
+                                li
+                                    a(href="/account/register") Register
+                                li
+                                    a(href="/account/login") Login
+            img(src='../../../images/header.jpg').center-block
+
+        .container
+            if (errorMessage)
+                .alert.alert-danger #{errorMessage}
+
+            block main-content
+
+        footer
+            p.text-center
+                | All Rights Reserved for your company
+
+        include scripts

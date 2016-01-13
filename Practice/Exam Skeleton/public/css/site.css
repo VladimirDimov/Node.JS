@@ -1,0 +1,35 @@
+.centered-form{
+    margin-top: 60px;
+}
+
+.centered-form .panel{
+    background: rgba(255, 255, 255, 0.8);
+    box-shadow: rgba(0, 0, 0, 0.3) 20px 20px 20px;
+}
+
+label.label-floatlabel {
+    font-weight: bold;
+    color: #46b8da;
+    font-size: 11px;
+}
+.error{
+    color: darkred;
+}
+.rightContainer {
+    float: left;
+    width: 80%;
+}
+.leftContainer {
+    float: left;
+    width: 150px;
+    margin-right: 20px;
+}
+.buttonMargin{
+    margin-left: 20px;
+}
+.hero-feature {
+    margin-bottom: 30px;
+}
+.cutText {
+    text-overflow: ellipsis;
+}

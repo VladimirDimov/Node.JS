@@ -1,0 +1,22 @@
+{
+  "name": "emarket",
+  "description": "File upload system",
+  "main": "server.js",
+  "authors": [
+    "IK"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/E-Market-Platform-Teamwork/E-Market",
+  "moduleType": [],
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular-route": "~1.4.8",
+    "bootpag": "~1.0.7"
+  }
+}
