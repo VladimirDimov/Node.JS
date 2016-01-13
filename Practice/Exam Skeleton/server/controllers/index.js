@@ -2,5 +2,6 @@ var UsersController = require('./UsersController');
 
 module.exports = {
     users: UsersController,
-    home: require('./HomeController')
+    home: require('./HomeController'),
+    upload: require('./UploadController')
 };
