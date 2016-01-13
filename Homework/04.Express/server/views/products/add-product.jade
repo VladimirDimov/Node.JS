@@ -1,0 +1,37 @@
+extends ../shared/admin-layout.jade
+block main-content
+    form.form-horizontal(method="post" action="/admin/products/add" enctype="multipart/form-data")
+        fieldset
+        legend Create Product
+        .form-group
+            label.col-lg-2.control-label(for='name') Name
+            .col-lg-10
+            input#name.form-control(type='text', placeholder='Name', name="name")
+        .form-group
+            label.col-lg-2.control-label(for='textArea') Description
+            .col-lg-10
+            textarea#textArea.form-control(rows='3', name="description")
+            span.help-block
+                | Write short description of the product.
+        .form-group
+            label.col-lg-2.control-label(for='price') Price
+            .col-lg-10
+            input#price.form-control(type='number', placeholder='Price', name="price")
+        .form-group
+            label.col-lg-2.control-label(for='quantity') Quantity
+            .col-lg-10
+            input#quantity.form-control(type='number', placeholder='Quantity', name="quantity")
+        .form-group
+           label.col-lg-2.control-label(for='categories') Categories
+           .col-lg-10
+           select(name="categories")
+               each category in categories
+                   option(value='#{category.id}') #{category.name}
+        .form-group
+            label.col-lg-2.control-label(for='productImage') Image
+            .col-lg-10
+            input#productImage.form-control(type='file', name='productImage')
+        .form-group
+            .col-lg-10.col-lg-offset-2
+            a(href="/admin/products/add").btn.btn-default Cancel
+            input.btn.btn-primary(type='submit' value="Create")

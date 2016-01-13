@@ -1,0 +1,18 @@
+extends ../shared/admin-layout
+
+block main-content
+    form.form-horizontal(method="post" action="/admin/categories/add")
+        fieldset
+        legend Create Category
+        .form-group
+            label.col-lg-1.control-label(for='name') Name
+            .col-md-8
+                input#name.form-control(type='text', placeholder='Name', name="name")
+        .form-group
+            label.col-lg-1.control-label(for='textArea') Description
+            .col-lg-8
+                textarea#textArea.form-control(rows='3', name="description", placeholder='Write short description of the category')
+        .form-group
+            .col-lg-10.col-lg-offset-3
+            a(href="/admin/categories/add").btn.btn-default Cancel
+            input.btn.btn-primary.buttonMargin(type='submit' value="Create")

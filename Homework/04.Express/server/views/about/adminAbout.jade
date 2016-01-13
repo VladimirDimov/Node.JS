@@ -1,0 +1,11 @@
+extends ../shared/admin-layout
+
+block main-content
+   .jumbotron
+      img(src="imageUrl" style="height: 50px; display: inline-block")
+      h1 #{info.companyName}
+
+      p  #{info.companyDescription}
+
+      a(href='about/edit') Edit
+

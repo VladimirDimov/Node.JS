@@ -1,0 +1,12 @@
+extends ../shared/layout
+block main-content
+    ul.nav.nav-pills
+        li
+            .jumbotron
+                h1 #{product.name}
+                p
+                    | #{product.description}
+                img(src="#{product.imageUrl}" alt="Poduct image!")
+                h2 #{product.price}
+                h2 #{product.quality}
+                h2 Published date #{product.dateUpdated}

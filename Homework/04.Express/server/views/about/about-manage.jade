@@ -1,0 +1,26 @@
+extends ../shared/admin-layout.jade
+
+block main-content
+    form.form-horizontal(method="post" action="/admin/about")
+        fieldset
+        legend Edit Your Company Info
+        .form-group
+            label.col-lg-2.control-label(for='name') Company name
+            .col-lg-10
+            input#name.form-control(type='text', value="#{info.companyName}", name="companyName")
+        .form-group
+            label.col-lg-2.control-label(for='textArea') Description
+            .col-lg-10
+            textarea#textArea.form-control(rows='3', name="companyDescription") #{info.companyDescription}
+        .form-group
+            .col-lg-10.col-lg-offset-2
+            a(href="/admin/about/edit").btn.btn-default Cancel
+            input.btn.btn-primary(type='submit' value="Apply")
+    form.form-horizontal(method="post" action="/admin/about/uploadImage" enctype="multipart/form-data")
+        .form-group
+            .col-lg-10
+            input#name.form-control(type='file', name="companyImage")
+        .form-group
+            .col-lg-10.col-lg-offset-2
+            a(href="/admin/about/edit").btn.btn-default Cancel
+            input.btn.btn-primary(type='submit' value="Upload Image")

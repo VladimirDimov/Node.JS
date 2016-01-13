@@ -1,0 +1,15 @@
+extends ../shared/layout
+
+block main-content
+    div(ng-controller="CategoriesCtrl")
+        ul.nav.nav-pills
+        each category in categories
+            li
+                .jumbotron
+                    h1 #{category.name}
+                    p
+                        | #{category.description}
+                    p
+                        a(href='#').btn.btn-primary.btn-lg Edit
+                        form()
+                            input(type="submit" ng-click="deleteCategory('#{category.id}')" value="Delete").btn.btn-primary.btn-lg

@@ -1,0 +1,12 @@
+extends ../shared/admin-layout
+block main-content
+   ul.nav.nav-pills
+   each category in categories
+      li
+         .jumbotron
+            h1 #{category.name}
+            p
+               | #{category.description}
+            p
+               a(href='http://localhost:3000/products/bycategory?category=#{category.name}').btn.btn-primary.btn-lg Go
+

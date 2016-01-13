@@ -1,0 +1,1 @@
+Run:   * npm install - to install all missing node packages* grunt Serve - will create folder app and start server at localhost:9578* grunt Build - will create folder dist with minified css, js and html

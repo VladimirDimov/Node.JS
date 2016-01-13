@@ -1,0 +1,10 @@
+extends ../shared/layout.jade
+
+script(src="https://cdn.socket.io/socket.io-1.4.3.js")
+
+block main-content
+    div(ng-controller="ChatController")
+        div(style="height: 500px; overflow-y: scroll").messages-container
+        input(type="text" name="message" ng-model="msg" id="input-message")
+        p(ng-model="username" ng-show="false")#username #{username}
+        button(ng-click="send()") Send

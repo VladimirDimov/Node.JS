@@ -1,0 +1,12 @@
+extends ../shared/layout
+block main-content
+   .row.text-center
+      each product in products
+         .col-md-3.col-sm-6.hero-feature
+            .thumbnail
+               img(src='#{product.imageUrl}', alt='')
+               .caption
+                  h3.cutText #{product.name}
+                  p.ellipsis #{product.description}
+                  p
+                     a.btn.btn-default(href='/products/#{product.id}') View

@@ -1,0 +1,34 @@
+doctype
+html
+    head
+        title Dev Tools
+        link(rel="stylesheet" type="text/css" href="styles/main.css")
+    body
+        h1 Welcome to the Development Tools Homework
+        
+        h2 This homework comes to you thanks to:
+        .img-container
+            a(href="http://gruntjs.com/")
+                img(src='images/grunt-logo.jpg', alt='grunt-logo')
+        
+        h3 Used Libs:
+        button.btn-show 
+            | Hide
+        .libs
+            .img
+                a(href="http://coffeescript.org/")
+                    img(src='images/coffee-logo.png', alt='coffee-scipt-logo')
+                .desc Write javascript with style
+            .img
+                a(href="http://jade-lang.com/")
+                    img(src='images/jade-logo.png', alt='jade-logo')
+                .desc Node Template Engine
+            .img
+                a(href="http://stylus-lang.com/")
+                    img(src='images/stylus-logo.png', alt='stylus-logo')
+                .desc Expressive, Dynamic, Robust CSS
+        
+    
+    script(src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js")
+    script(src="scripts/main.js")
+    
