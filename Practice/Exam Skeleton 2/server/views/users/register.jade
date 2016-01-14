@@ -1,0 +1,35 @@
+extends ../shared/layout
+
+block main-content
+    form(method="post" name="myForm" action="/register")
+        if(errorMessage)
+            p errorMessage
+        label(for="email") E-mail
+        input(id="email" class="form-control" type="email" name="email" placeholder="E-mail")
+        p.help-block(ng-show='myForm.email.$error.required') Please provide your E-mail
+        br
+        label(for="username") Username
+        input(id="username" class="form-control" type="text" name="username" placeholder="Username")
+        br
+        label(for="password") Password
+        input(id="password" class="form-control" type="password" name="password" ng-model="password" placeholder="Password" ng-minlength="6" ng-maxlength="20" required)
+        p(class="help-block" ng-show="myForm.password.$error.minlength") Password should be at least 6 characters
+        p(class="help-block" ng-show="myForm.password.$error.required") Please, type your password
+        br
+        label(for="confirm-password") Confirm Password
+        input(id="confirmPassword" class="form-control" type="password" name="confirmPassword" placeholder="Confirm password" ng-model="confirmPassword" required)
+        p(class="help-block" ng-show="password != confirmPassword") Password confirmation is not the same
+        br
+        label(for="first-name") First Name
+        input(id="first-name" class="form-control" type="text" name="firstName" placeholder="First Name")
+        br
+        label(for="last-name") Last Name
+        input(id="last-name" class="form-control" type="text" name="lastName" placeholder="Last Name")
+        br
+        label(for="phone-number") Phone Number
+        input(id="phone-number" class="form-control" type="text" name="phoneNumber" placeholder="Phone Number")
+        br
+        label(for="avatar") Avatar
+        input(id="avatar" class="form-control" type="text" name="avatar" placeholder="Avatar")
+        br
+        input(type="submit" class="btn btn-lg" value="Register" ng-disabled="{{!myForm.$valid}}")

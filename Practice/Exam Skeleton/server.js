@@ -10,9 +10,6 @@ require('./server/config/mongoose')(config);
 require('./server/config/passport')(config);
 require('./server/config/routers/routes-loader')(app);
 
-var http = require('http').Server(app);
-var io = require('./server/config/socketio').listen(http);
-
-http.listen(config.port);
+app.listen(config.port);
 
 console.log("Server running on port: " + config.port);
